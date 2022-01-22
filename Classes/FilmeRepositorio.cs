@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using DIO.Series.Interfaces;
 
-namespace DIO.Series
+namespace DIO.Filmes
 {
-	public class FilmeRepositorio : IRepositorio<Filme>
-	{
-        private List<Filme> listaFilme = new List<Filme>();
+    public class FilmeRepositorio : IRepositorio<Filme>
+    {
+		private List<Filme> listaFilme= new List<Filme>();
 		public void Atualiza(int id, Filme objeto)
 		{
 			listaFilme[id] = objeto;
@@ -34,7 +34,18 @@ namespace DIO.Series
 
 		public Filme RetornaPorId(int id)
 		{
-			return listaFilme[id];
+			try
+			{
+				return listaFilme[id];
+			}
+			catch
+			{
+				Console.WriteLine("-----------------------------------");
+				Console.WriteLine("* MSG 024 - Filme não cadastrado. *");
+				Console.WriteLine("-----------------------------------");
+				return null;
+			}
 		}
-	}
+    }
+
 }

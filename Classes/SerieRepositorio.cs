@@ -4,7 +4,10 @@ using DIO.Series.Interfaces;
 
 namespace DIO.Series
 {
-	public class SerieRepositorio : IRepositorio<Serie>
+	
+//	public class SerieRepositorio : IRepositorio<Serie> 
+	public class SerieRepositorio : IRepositorio<Serie>  
+	
 	{
         private List<Serie> listaSerie = new List<Serie>();
 		public void Atualiza(int id, Serie objeto)
@@ -34,7 +37,17 @@ namespace DIO.Series
 
 		public Serie RetornaPorId(int id)
 		{
-			return listaSerie[id];
+			try
+			{
+				return listaSerie[id];
+			}
+			catch
+			{
+				Console.WriteLine("-----------------------------------");
+				Console.WriteLine("* MSG 010 - Série não cadastrada. *");
+				Console.WriteLine("-----------------------------------");				
+				return null;
+			}
 		}
 	}
 }
