@@ -4,6 +4,15 @@
 
 [Slides](dio-dotnet-poo-lab-2.pdf)
 
+### Alterações efetuadas:
+
+    - Alteração do design através da refatoração e modularização do código inicial;
+    - Inclusão do módulo do repositório de filmes;
+    - Implementação de opção no menu principal para contemplar o módulo de filmes;
+    - Criação de novo menu com as funcionalidades para manutenção da base de filmes;
+    - Sequenciamento das mensagens utilizadas na aplicação; e
+    - Implentação de pesquisa nas funções de atualizações e exclusões.
+
 ## Contato
 
 Eliézer Zarpelão
